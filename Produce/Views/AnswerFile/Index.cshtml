@@ -22,7 +22,7 @@
                         htmlAttributes: new { id = "grdAnswerFiles" },
                         fillEmptyRows: false,
                         columns: grid.Columns(
-                            grid.Column(format: @<text><input name="deleteId" type="checkbox" value="@item.AnswerFileGuid.ToString()" /></text>),
+                            grid.Column(format: @<text><input name="deleteId" type="checkbox" value="@item.AnswerFileGuid.ToString()" aria-label="@Resources.Strings.SelectRow" /></text>),
                             grid.Column("RunDateUtc", Resources.Strings.DateCreated, format:(item) => @Infiniti.MvcControllers.UserSettings.FormatLocalDate(item.RunDateUtc, "g")),
                             grid.Column("Description", header: Resources.Strings.Description,
                                 format: @<text>

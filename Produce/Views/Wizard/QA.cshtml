@@ -43,7 +43,7 @@
     });
     $('#up').on('click', 'input[type="submit"]', function (e) {
         e.preventDefault();
-        if ($(this).data('pushstate') == 'true') {
+        if ($(this).data('pushstate') == true) {
             wiz.formIsDirty = true;
             wiz.pushingState = true;
         }

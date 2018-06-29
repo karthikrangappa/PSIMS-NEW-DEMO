@@ -12,7 +12,7 @@
             <asp:Button ID="btnExport" runat="server" CssClass="toolbtn" Text="<%$Resources:Strings, Export %>" />
             <asp:Button ID="btnPublish" runat="server" CssClass="toolbtn" Text="<%$Resources:Strings, Publish %>" ToolTip="<%$Resources:Strings, PublishProjectHelp %>" />
             <input type="button" id="btnWebDesign" runat="server" class="toolbtn" visible="false" value="<%$Resources:Strings, Design %>" title="<%$Resources:Strings, DesignProjectHelp %>"
-                onclick="window.open('WebDesign/editor.html?v=91421352264914641#/?id=" />
+                onclick="window.open('WebDesign/editor.html?v=19233258072466513551#/?id=" />
             <span class="tooldiv"></span>
             <asp:Button ID="btnVersions" runat="server" CssClass="toolbtn" Text="<%$Resources:Strings, VersionHistory %>" ToolTip="<%$Resources:Strings, VersionsHelp %>" />
             <asp:Button ID="btnProjects" runat="server" CssClass="toolbtn" Text="<%$Resources:Strings, Projects %>" ToolTip="<%$Resources:Strings, FragmentProjectsHelp %>" />

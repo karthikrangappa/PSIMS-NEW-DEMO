@@ -293,6 +293,7 @@
   <update ver="9.7.3"/>
   <update ver="9.7.8"/>
   <update ver="9.7.14"/>
+  <update ver="9.7.25"/>
   <update ver="10.0.0"/>
   <update ver="10.0.1"/>
   <update ver="10.0.2"/>
@@ -318,4 +319,6 @@
   <update ver="10.0.38"/>
   <update ver="10.0.39"/> 
   <update ver="10.0.40"/>
+  <update ver="10.0.43"/>
+  <update ver="10.0.44"/>
 </versions>

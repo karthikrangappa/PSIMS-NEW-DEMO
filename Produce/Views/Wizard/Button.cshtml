@@ -52,16 +52,16 @@ else
     {
         if (Model.ButtonQuestionModel.NewTab)
         {
-            clickEvent = (Model.LogInteractions ? "wiz.dataAnalyticsFocusAndBlur(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.AnalyticsID) + ", 'buttonGoToUrl'" + ");" : "") + "window.open(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.ButtonQuestionModel.LaunchUrl) + ");";
+            clickEvent = (Model.LogInteractions ? "wiz.dataAnalyticsFocusAndBlur(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.AnalyticsID) + ", 'buttonGoToUrl'" + ");" : "") + "window.open(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.ButtonQuestionModel.LaunchUrl) + ");return false;";
         }
         else
         {
-            clickEvent = (Model.LogInteractions ? "wiz.dataAnalyticsFocusAndBlur(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.AnalyticsID) + ", 'buttonGoToUrl'" + ");" : "") + "window.location.href = " + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.ButtonQuestionModel.LaunchUrl) + ";";
+            clickEvent = (Model.LogInteractions ? "wiz.dataAnalyticsFocusAndBlur(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.AnalyticsID) + ", 'buttonGoToUrl'" + ");" : "") + "window.location.href = " + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.ButtonQuestionModel.LaunchUrl) + ";return false;";
         }
     }
     else if (Model.ButtonQuestionModel.ButtonType == Intelledox.Model.ButtonType.GoToPage)
     {
-        clickEvent = (Model.LogInteractions ? "wiz.dataAnalyticsFocusAndBlur(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.AnalyticsID) + ", 'buttonGoToPage'" + ");" : "") + "wiz.goToPage('" + Model.ButtonQuestionModel.GoToPageGuid.ToString() + "')";
+        clickEvent = (Model.LogInteractions ? "wiz.dataAnalyticsFocusAndBlur(" + Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.AnalyticsID) + ", 'buttonGoToPage'" + ");" : "") + "wiz.goToPage('" + Model.ButtonQuestionModel.GoToPageGuid.ToString() + "');return false;";
     }
     else if (Model.ButtonQuestionModel.ButtonType == Intelledox.Model.ButtonType.GoToProject)
     {
@@ -70,10 +70,10 @@ else
                                           Microsoft.Security.Application.Encoder.JavaScriptEncode(Model.ButtonQuestionModel.GoToProjectGroupGuid.ToString()) + ", " +
                                           Microsoft.Security.Application.Encoder.JavaScriptEncode(Request.QueryString["portal"]) + ", " +
                                           Microsoft.Security.Application.Encoder.JavaScriptEncode(Request.QueryString["portalsave"]) + ", " +
-                                          Microsoft.Security.Application.Encoder.JavaScriptEncode(Request.QueryString["wizardMode"]) + ")";
+                                          Microsoft.Security.Application.Encoder.JavaScriptEncode(Request.QueryString["wizardMode"]) + ");return false;";
     }
     <div class="btn-group">
-        <label id="@labelId" name="@labelId" class="btn btn-primary tile @divClass @labelClass" onmouseover="@hoverEvent" onmouseout="@hoverEvent" onclick="@clickEvent">
+        <button id="@labelId" name="@labelId" class="btn btn-primary tile @divClass @labelClass" onmouseover="@hoverEvent" onmouseout="@hoverEvent" onclick="@clickEvent">
             @if (Model.ButtonQuestionModel.Size != Intelledox.Model.ButtonSize.Small)
             {
                 <span class="tile-content">@Model.Question.TitleFormatted</span>
@@ -86,7 +86,7 @@ else
             {
                 <span class="tile-badge">@Model.Question.BadgeFormatted</span>
             }
-        </label>
+        </button>
     </div>
 }
 

@@ -6,7 +6,7 @@
 {
     <h2 class="titleProgress">
         @Resources.Strings.FormsAssignedToMyGroup
-        <img src="" id="TaskListButtonForGroup" class="ExpandButton" alt="@Resources.Strings.Open/@Resources.Strings.Close" />
+        <img src="~/images/up-dk.png" id="TaskListButtonForGroup" class="ExpandButton" alt="@Resources.Strings.Open/@Resources.Strings.Close" />
     </h2>
 
     var grid = new WebGrid(source: Model.TaskListResultsForGroup, canPage: true, rowsPerPage: 20, fieldNamePrefix: "taskGroup");
@@ -25,7 +25,7 @@
             gridColumns.Add(grid.Column(null, null,@<text> @if (@item.AllowCancellation)
             {
                 <div class="dropdown pull-right">
-                    <button role="button" class="btn btn-default btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-default btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="caret"></span>
                         <span class="sr-only">@Resources.Strings.ToggleActionDropdown</span>
                     </button>

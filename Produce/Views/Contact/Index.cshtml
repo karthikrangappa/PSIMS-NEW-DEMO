@@ -28,7 +28,7 @@
                     @foreach (var row in Model)
                     {
                         <tr>
-                            <td><input type="checkbox" name="contactId" value="@row.AddressId" /></td>
+                            <td><input type="checkbox" name="contactId" value="@row.AddressId" aria-label="@Resources.Strings.SelectRow" /></td>
                             <td>
                                 <a href="@Url.Action("Edit", new { Id = row.AddressId })">
                                     @if (String.IsNullOrWhiteSpace(row.FullName))

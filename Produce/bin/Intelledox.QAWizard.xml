@@ -956,7 +956,7 @@
               Looks up a localized string similar to Euro.
             </summary>
         </member>
-        <member name="P:Intelledox.QAWizard.Resources.Strings.ExtensionNotInstalledInProduce">
+        <member name="P:Intelledox.QAWizard.Resources.Strings.ExtensionNotInstalled">
             <summary>
               Looks up a localized string similar to Datasource extension has not been loaded, check the config file for the datasource section.
             </summary>

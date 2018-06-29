@@ -11,8 +11,8 @@
     </script>
     <link href="../Content/bootstrap.min.css?v=337" rel="stylesheet" type="text/css" />
     <link href="../Content/bootstrap-theme.min.css?v=337" rel="stylesheet" />
-    <link href="Content/Produce.css?v=91421352264914641" rel="stylesheet" />
-    <link href="Content/Site.css?v=91421352264914641" rel="stylesheet" />
+    <link href="Content/Produce.css?v=19233258072466513551" rel="stylesheet" />
+    <link href="Content/Site.css?v=19233258072466513551" rel="stylesheet" />
 
     <script src="../Scripts/jquery-3.1.1.js"></script>
     <script src="../Scripts/bootstrap.min.js?v=337"></script>
@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="../node_modules/angularjs-color-picker/dist/themes/angularjs-color-picker-bootstrap.min.css" />
     <script src="../node_modules/tinycolor2/dist/tinycolor-min.js"></script>
     <script src="../node_modules/angularjs-color-picker/dist/angularjs-color-picker.min.js"></script>
-    <script src="Content/QAWizardDesign/Strings.js?v=91421352264914641"></script>
-    <script src="scripts/app.js?v=91421352264914641"></script>
+    <script src="Content/QAWizardDesign/Strings.js?v=19233258072466513551"></script>
+    <script src="scripts/app.js?v=19233258072466513551"></script>
     <script src="scripts/ios-drag-drop.js"></script>
     <script src="scripts/Ace/ace-min.js"></script>
     <script src="scripts/Ace/ext-language_tools.js"></script>
@@ -74,7 +74,7 @@
 <body ng-controller="appCtrl">
     <div class="header">
         <div id="headerInner">
-            <button id="GoBack" ng-click="closeProject()" title="Back">{{'Back'|translate}}</button>
+            <button id="GoBack" ng-click="closeProject()" title="{{'Back'|translate}}">{{'Back'|translate}}</button>
             <span ng-bind="model.projectName"></span>
 
             <div id="ProjectOptions">
@@ -85,7 +85,7 @@
                 <img src="Images/Separator32.svg?v=3" id="NavSeparator" alt="|" height="32" width="10" ng-show="model.isWorkflowAvailable" />
                 <button ng-click="model.editorRefreshLists()" id="RefreshLists" ng-show="model.wizard != null" title="{{ 'RefreshListsToolStripMenuItem' | translate }}"></button>
                 <button ng-click="model.projectProperties()" id="projectProperties" ng-show="model.wizard != null" title="{{ 'mnuSetProjectProperties' | translate }}"></button>
-                <button ng-click="model.validateProject()" id="ValidateProject" ng-show="model.wizard != null" title="{{ 'Validate' | translate }}"></button>
+                <button ng-click="model.validateProject()" id="ValidateProject" ng-show="model.wizard != null" title="{{ 'ValidateString' | translate }}"></button>
                 <button ng-click="model.editorFind()" id="Find" ng-show="model.wizard != null" title="{{ 'FindString' | translate }} / {{ 'mnuActionFindAndReplace' | translate }}" accesskey="f"></button>
                 <img src="Images/Separator32.svg?v=3" id="NavHelpSeparator" alt="|" height="32" width="10" ng-show="model.helpUrl" />
                 <button ng-click="model.help()" id="KBHelp" ng-show="model.helpUrl !== ''" title="{{ 'Help' | translate }}" accesskey="w"></button>
@@ -168,8 +168,8 @@
                                   on-node-selected="nodeSelected(node)" top-selected-func="nodeSelected"
                                   on-editor-drop="previewDrop(mode, dropped, targetNode)" top-editor-drop-func="editorDrop"></preview-node>
                 </div>
-                <div ng-if="model.isFinishPage" ng-include="'Views/Preview/answerFilePreviewNode.html?v=91421352264914641'"></div>
-                <div ng-if="model.isWorkflowPage" ng-include="'Views/Preview/workflowPreviewNode.html?v=91421352264914641'"></div>
+                <div ng-if="model.isFinishPage" ng-include="'Views/Preview/answerFilePreviewNode.html?v=19233258072466513551'"></div>
+                <div ng-if="model.isWorkflowPage" ng-include="'Views/Preview/workflowPreviewNode.html?v=19233258072466513551'"></div>
             </div>
         </div>
     </div>
@@ -178,129 +178,129 @@
         <div ng-switch on="model.panelCode">
             <div ng-switch-when="properties" ng-switch on="model.propertiesPanelCode" class="properties-panel">
                 <div ng-switch-when="page">
-                    <ng-include src="'Views/Properties/pageProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/pageProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="question">
-                    <ng-include src="'Views/Properties/questionProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/questionProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="answer">
-                    <ng-include src="'Views/Properties/answerProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/answerProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="section">
-                    <ng-include src="'Views/Properties/sectionProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/sectionProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="column">
-                    <ng-include src="'Views/Properties/columnProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/columnProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="tabGroup">
-                    <ng-include src="'Views/Properties/tabGroupProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/tabGroupProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="tabPage">
-                    <ng-include src="'Views/Properties/tabPageProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/tabPageProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="answerFile">
-                    <ng-include src="'Views/Properties/answerFileProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/answerFileProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="action">
-                    <ng-include src="'Views/Properties/actionProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/actionProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="fragment">
-                    <ng-include src="'Views/Properties/fragmentProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/fragmentProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="availableInput">
-                    <ng-include src="'Views/Properties/availableInputProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/availableInputProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="fragmentOutput">
-                    <ng-include src="'Views/Properties/fragmentOutputProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/fragmentOutputProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="fragmentDocument">
-                    <ng-include src="'Views/Properties/fragmentDocumentProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/fragmentDocumentProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="contentItem">
-                    <ng-include src="'Views/Properties/contentItemProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/contentItemProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="workflowParallel">
-                    <ng-include src="'Views/Properties/workflowParallelProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/workflowParallelProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="workflowState">
-                    <ng-include src="'Views/Properties/workflowStateProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/workflowStateProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="workflowTransition">
-                    <ng-include src="'Views/Properties/workflowTransitionProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/workflowTransitionProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="placeholder">
-                    <ng-include src="'Views/Properties/placeholderProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/placeholderProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="template">
-                    <ng-include src="'Views/Properties/templateProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/templateProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-when="escalation">
-                    <ng-include src="'Views/Properties/escalationProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/escalationProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
                 <div ng-switch-default>
-                    <ng-include src="'Views/Properties/noProperties.html?v=91421352264914641'"></ng-include>
+                    <ng-include src="'Views/Properties/noProperties.html?v=19233258072466513551'"></ng-include>
                 </div>
             </div>
 
             <div ng-switch-when="conditions" class="properties-panel">
-                <ng-include src="'Views/Properties/conditions.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/conditions.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="validations" class="properties-panel">
-                <ng-include src="'Views/Properties/validations.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/validations.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="dataFilters" class="properties-panel">
-                <ng-include src="'Views/Properties/filters.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/filters.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="sorting" class="properties-panel">
-                <ng-include src="'Views/Properties/sorting.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/sorting.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="displayFields" class="properties-panel">
-                <ng-include src="'Views/Properties/displayFields.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/displayFields.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="rules" class="properties-panel">
-                <ng-include src="'Views/Properties/rules.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/rules.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="actionDocuments" class="properties-panel">
-                <ng-include src="'Views/Properties/actionDocuments.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/actionDocuments.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="series" class="properties-panel">
-                <ng-include src="'Views/Properties/series.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/series.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="answerFileOptions" class="properties-panel">
-                <ng-include src="'Views/Properties/answerFileOptions.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/answerFileOptions.html?v=19233258072466513551'"></ng-include>
             </div>
 
             <div ng-switch-when="protectedFields" class="properties-panel">
-                <ng-include src="'Views/Properties/protectedFields.html?v=91421352264914641'"></ng-include>
+                <ng-include src="'Views/Properties/protectedFields.html?v=19233258072466513551'"></ng-include>
             </div>
         </div>
     </div>
     <div id="panel-flyout" class="panel-flyout col" ng-switch on="model.flyoutPanelCode" properties-droppable="null">
         <div ng-switch-when="placeholders" class="panel-flyout-inner">
-            <ng-include src="'Views/Flyouts/availablePlaceholders.html?v=91421352264914641'"></ng-include>
+            <ng-include src="'Views/Flyouts/availablePlaceholders.html?v=19233258072466513551'"></ng-include>
         </div>
         <div ng-switch-when="actions" class="panel-flyout-inner">
-            <ng-include src="'Views/Flyouts/availableActions.html?v=91421352264914641'"></ng-include>
+            <ng-include src="'Views/Flyouts/availableActions.html?v=19233258072466513551'"></ng-include>
         </div>
         <div ng-switch-when="actionsWorkflow" class="panel-flyout-inner">
-            <ng-include src="'Views/Flyouts/availableActions.html?v=91421352264914641'"></ng-include>
+            <ng-include src="'Views/Flyouts/availableActions.html?v=19233258072466513551'"></ng-include>
         </div>
         <div ng-switch-when="projectFragments" class="panel-flyout-inner">
-            <ng-include src="'Views/Flyouts/availableFragments.html?v=91421352264914641'"></ng-include>
+            <ng-include src="'Views/Flyouts/availableFragments.html?v=19233258072466513551'"></ng-include>
         </div>
         <div ng-switch-when="contentItems" class="panel-flyout-inner">
-            <ng-include src="'Views/Flyouts/availableContentItems.html?v=91421352264914641'"></ng-include>
+            <ng-include src="'Views/Flyouts/availableContentItems.html?v=19233258072466513551'"></ng-include>
         </div>
         <div ng-switch-when="escalations" class="panel-flyout-inner">
-            <ng-include src="'Views/Flyouts/availableEscalations.html?v=91421352264914641'"></ng-include>
+            <ng-include src="'Views/Flyouts/availableEscalations.html?v=19233258072466513551'"></ng-include>
         </div>
     </div>
     <div class="panel-select col">

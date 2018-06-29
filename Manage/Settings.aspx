@@ -849,31 +849,6 @@
                             </asp:CustomValidator>
                         </td>
                     </tr>
-                    <tr id="trAddressLockout" runat="server">
-                        <td colspan="3">
-                            <asp:Label ID="txtAddressLockoutAttemptsDescription" runat="server" Text="<%$Resources:Strings, TooManyRequestsFromAddressDescription%>"
-                                AssociatedControlID="txtAddressLockoutAttempts" ToolTip="<%$Resources:Strings, TooManyRequestsFromAddressDescription%>"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txtAddressLockoutAttempts" runat="server" MaxLength="3" CssClass="fld" ToolTip="<%$Resources:Strings, TooManyRequestsFromAddressDescription%>"></asp:TextBox>
-                            <asp:CustomValidator ID="valAddressLockoutAttempts" runat="server" ErrorMessage="<%$Resources:Strings, NumericType %>"
-                                Display="Dynamic" ClientValidationFunction="validateNumericGreaterThanZero" ControlToValidate="txtAddressLockoutAttempts" CssClass="wrn" ValidateEmptyText="true">
-                            </asp:CustomValidator>
-                        </td>
-                    </tr>
-                    <tr id="trIpAddressLockoutTime" runat="server">
-                        <td colspan="3">
-                            <asp:Label ID="lblIpAddressLockoutTimeDescription" runat="server" Text="<%$Resources:Strings, TooManyRequestsTimeOutDescription%>"
-                                AssociatedControlID="txtIPAddressLockoutTime" ToolTip="<%$Resources:Strings, TooManyRequestsTimeOutDescription%>"></asp:Label>
-                        </td>
-
-                        <td>
-                            <asp:TextBox ID="txtIPAddressLockoutTime" runat="server" MaxLength="3" CssClass="fld" ToolTip="<%$Resources:Strings, TooManyRequestsTimeOutDescription%>"></asp:TextBox>
-                            <asp:CustomValidator ID="valIPAddressLockoutTime" runat="server" ErrorMessage="<%$Resources:Strings, NumericType %>"
-                                Display="Dynamic" ClientValidationFunction="validateNumericGreaterThanZero" ControlToValidate="txtIPAddressLockoutTime" CssClass="wrn" ValidateEmptyText="true">
-                            </asp:CustomValidator>
-                        </td>
-                    </tr>
 
                     <tr>
                         <th colspan="4">

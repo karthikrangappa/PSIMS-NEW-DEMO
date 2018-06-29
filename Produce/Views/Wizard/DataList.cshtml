@@ -87,7 +87,7 @@ else
     else
     {
         <div id="@(qid)_boxMultiple" class="multiDataListBox" @Html.Raw(Model.Question.IsRealtimeParentQuestion ? "onscroll=\"document.getElementById('" + qid + "_pos').value=this.scrollTop\"" : "")>
-            <input type="hidden" id="@(qid)_pos" value="@(String.IsNullOrEmpty(Request.Form[qid + "_pos"]) ? "0" : Request.Form[qid + "_pos"])" />
+            <input type="hidden" id="@(qid)_pos" name="@(qid)_pos" value="@(String.IsNullOrEmpty(Request.Form[qid + "_pos"]) ? "0" : Request.Form[qid + "_pos"])" />
             <input type="hidden" value="@String.Join(",", Model.Question.SelectedIndices)" name="@(qid)_OriginalList" />
             <input type="hidden" value="@Model.SelectData.Count" name="@(qid)_OriginalCount" />
             <script type="text/javascript">document.getElementById('@(qid)_boxMultiple').scrollTop = document.getElementById('@(qid)_pos').value;</script>
